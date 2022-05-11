@@ -1,7 +1,6 @@
 (function($,sr){
 
-  // debouncing function from John Hann
-  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+ 
   var debounce = function (func, threshold, execAsap) {
       var timeout;
 
@@ -21,7 +20,7 @@
           timeout = setTimeout(delayed, threshold || 100);
       };
   }
-  // smartresize 
+
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
@@ -32,18 +31,18 @@ var $ = jQuery;
 (function(){
 
 
-  ///////////////////////////////
+
   // Set Home Slideshow Height
-  ///////////////////////////////
+
 
   function setHomeBannerHeight() {
     var windowHeight = jQuery(window).height(); 
     jQuery('#header').height(windowHeight);
   }
 
-  ///////////////////////////////
+ 
   // Center Home Slideshow Text
-  ///////////////////////////////
+ 
 
   function centerHomeBannerText() {
       var bannerText = jQuery('#header > .center');
@@ -65,9 +64,9 @@ var $ = jQuery;
 
 
 
-  ///////////////////////////////
+ 
   // Initialize
-  ///////////////////////////////
+ 
 
   jQuery.noConflict();
   setHomeBannerHeight();
@@ -82,9 +81,8 @@ var $ = jQuery;
 })();
 
 
-  ///////////////////////////////
   // Smooth Scroll
-  ///////////////////////////////
+
 
 
 smoothScroll.init();
@@ -92,9 +90,8 @@ smoothScroll.init();
 
 
 
-  ///////////////////////////////
   // Animate Css
-  ///////////////////////////////
+
 var $ = jQuery;
 
 function animationHover(element, animation){
@@ -119,9 +116,8 @@ $(document).ready(function(){
 
 
 
-  ///////////////////////////////
   // Header Fixed
-  ///////////////////////////////
+
 
 
 
@@ -147,7 +143,7 @@ function scroll() {
 
 
   ///////////////////////////////
-  // Testimonial Slide
+  // About me slid Slide
   ///////////////////////////////
 
  $(document).ready(function() {
@@ -163,23 +159,5 @@ function scroll() {
 });
 
 
-  ///////////////////////////////
-  // google map
-  ///////////////////////////////
-
-// function initialize()
-// {
-// var mapProp = {
-//   center:new google.maps.LatLng(51.508742,-0.120850),
-//   zoom:5,
-//   mapTypeId:google.maps.MapTypeId.ROADMAP,
-//   disableDefaultUI: true,
-//   scrollwheel: false
-//   };
-// var map=new google.maps.Map(document.getElementById("googleMap")
-//   ,mapProp);
-// }
-
-// google.maps.event.addDomListener(window, 'load', initialize);
 
 
